@@ -1,5 +1,4 @@
 import 'package:camgo_mobile/home.dart';
-
 import 'package:flutter/material.dart';
 
 void main() {
