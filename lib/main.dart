@@ -1,4 +1,6 @@
 import 'package:camgo_mobile/home.dart';
+import 'package:camgo_mobile/screens/view/login_by_email_page.dart';
+import 'package:camgo_mobile/screens/view/login_by_phone_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home:  LoginByPhonePage(),
     );
   }
 }

@@ -16,7 +16,7 @@ class TextFormFieldResponeWidget extends StatefulWidget {
     required this.controller,
     this.maxLine,
     this.minLine,
-    this.textInputType = TextInputType.text, this.fontSizeError = 10, this.isValidator = true, this.colorsError = Colors.red, this.paddingTextHorizontal = 17, this.paddingTextVertical =10, this.obscureText = false, this.inputFormatters = const[],
+    this.textInputType = TextInputType.text, this.fontSizeError = 10, this.isValidator = true, this.colorsError = Colors.red, this.paddingTextHorizontal = 17, this.paddingTextVertical =10, this.obscureText = false, this.inputFormatters = const[], this.orderRadius = 12,
   }) : super(key: key);
   final String? msgError;
   final String? hintText;
@@ -36,6 +36,7 @@ class TextFormFieldResponeWidget extends StatefulWidget {
   final double? paddingTextHorizontal;
   final double? paddingTextVertical;
   final bool? obscureText;
+  final double? orderRadius;
   final List<TextInputFormatter>? inputFormatters;
   @override
   State<TextFormFieldResponeWidget> createState() => _TextFormFieldResponeWidgetState();
@@ -67,7 +68,7 @@ class _TextFormFieldResponeWidgetState extends State<TextFormFieldResponeWidget>
           labelStyle: widget.labelStyle != null ? widget.labelStyle! : null,
           labelText: widget.labelText != "" ? widget.labelText! : null,
           contentPadding: EdgeInsets.symmetric(horizontal: widget.paddingTextHorizontal!,vertical: widget.paddingTextVertical!),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(widget.orderRadius!)),
           suffixIcon: widget.suffixIcon != null ? widget.suffixIcon : null,
           prefixIcon: widget.prefixIcon != null ? widget.prefixIcon : null,
         ),
